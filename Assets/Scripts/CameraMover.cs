@@ -32,8 +32,8 @@ public class CameraMover : MonoBehaviour
 
     private void SetTargetPosition(Vector2 mousePosition)
     {
-        float targetXOffset = (mousePosition.x - _player.transform.position.x) / 4.5f;
-        float targetYOffset = (mousePosition.y - _player.transform.position.y) / 3.5f;
+        float targetXOffset = (mousePosition.x - _player.transform.position.x) / _offsetX;
+        float targetYOffset = (mousePosition.y - _player.transform.position.y) / _offsetY;
 
         _targetPosition = new Vector3(_player.transform.position.x + targetXOffset, _player.transform.position.y + targetYOffset, transform.position.z);
     }
